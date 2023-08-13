@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+
+<html data-ng-app="">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+    <div data-ng-init="names=['Vivek','Viraj','Avisha','Vikas']" >
+
+        <ul>
+            <li data-ng-repeat="name in names | orderBy : 'name'"> {{name}} </li>
+        </ul>
+
+
+    </div>
+    <script src="angular.min.js"></script>
+</body>
+</html>

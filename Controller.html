@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html data-ng-app="myApp">
+<head>
+    <meta charset="utf-8" />
+    <title>AngularJS Example</title>
+</head>
+<body>
+    <div data-ng-controller="SimpleController">
+
+        <ul>
+            <li data-ng-repeat="sib in Siblings">{{ sib.name }}</li>
+        </ul>
+
+    </div>
+
+    <script src="angular.min.js"></script>
+    <script>
+        var app = angular.module('myApp', []);
+
+        app.controller('SimpleController', ['$scope', function($scope) {
+            $scope.Siblings = [
+                { name: 'Vivek', city: 'Vasco' },
+                { name: 'Vikas', city: 'Kolkata' }
+            ];
+        }]);
+    </script>
+</body>
+</html>

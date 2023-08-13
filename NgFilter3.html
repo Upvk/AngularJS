@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+
+<html data-ng-app="">
+<head>
+    <meta charset="utf-8" />
+    <title> Filter and Order By</title>
+</head>
+<body data-ng-init="Siblings = [{name : 'Vivek', city : 'Vasco'}, {name : 'Vikas', city : 'Kolkatta'}]">
+
+    <input data-ng-model="text" />
+
+    <ui>
+        <ul data-ng-repeat="sib in Siblings | filter : text | orderBy : 'name' "> {{ sib.name }} - {{ sib.city }} </ul>
+    </ui>
+
+    <script src="angular.min.js"></script>
+
+</body>
+</html>

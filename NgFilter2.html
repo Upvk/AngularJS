@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+
+<html data-ng-app="">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body data-ng-init="names = ['Vivek','Vikas','Viraj','Vibha']">
+
+    <input data-ng-model="text" />
+
+    <ui>
+        <ul data-ng-repeat="name in names | filter : text "> {{ name }} </ul>
+
+    </ui>
+
+    <script src="angular.min.js"> </script>
+</body>
+</html>
